@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Praktikum4</string>
+
+    <string name="judul">Teknologi Informasi-UMY</string>
+    <string name="subjudul">Rangga Alfarizzy-20240140059</string>
+    <string name="copyright">Copyright, 2026</string>
 </resources>
