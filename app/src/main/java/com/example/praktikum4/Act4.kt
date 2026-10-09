@@ -31,7 +31,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun AktivitasPertama(modifier: Modifier) {
+fun AktivitasPertama(modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .fillMaxSize()
