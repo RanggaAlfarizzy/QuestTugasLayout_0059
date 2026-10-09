@@ -57,6 +57,50 @@ fun AktivitasPertama(modifier: Modifier) {
             )
 
             Spacer(modifier = Modifier.height(25.dp))
+
+            CardKarakter(
+                gambarKarakter = R.drawable.phoebe,
+                gambarElemen = R.drawable.spectro,
+                nama = R.string.nama_1,
+                informasi = R.string.informasi_1,
+                elemen = R.string.elemen_1,
+                warna = R.color.card_1_bg
+            )
+
+            Spacer(modifier = Modifier.height(15.dp))
+
+            CardKarakter(
+                gambarKarakter = R.drawable.denia,
+                gambarElemen = R.drawable.fusion,
+                nama = R.string.nama_2,
+                informasi = R.string.informasi_2,
+                elemen = R.string.elemen_2,
+                warna = R.color.card_2_bg
+            )
+
+            Spacer(modifier = Modifier.height(15.dp))
+
+
+            CardKarakter(
+                gambarKarakter = R.drawable.cartethyia,
+                gambarElemen = R.drawable.aero,
+                nama = R.string.nama_3,
+                informasi = R.string.informasi_3,
+                elemen = R.string.elemen_3,
+                warna = R.color.card_3_bg
+            )
+
+            Spacer(modifier = Modifier.height(15.dp))
+
+
+            CardKarakter(
+                gambarKarakter = R.drawable.hiyuki,
+                gambarElemen = R.drawable.glacio,
+                nama = R.string.nama_4,
+                informasi = R.string.informasi_4,
+                elemen = R.string.elemen_4,
+                warna = R.color.card_4_bg
+            )
         }
     }
 }
