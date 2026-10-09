@@ -5,4 +5,11 @@
     <color name="judul_color">#25213A</color>
     <color name="subjudul_color">#55516A</color>
     <color name="copyright_color">#55516A</color>
+
+    <color name="card_1_bg">#575454</color>
+    <color name="card_2_bg">#7139CC</color>
+    <color name="card_3_bg">#2855C5</color>
+    <color name="card_4_bg">#145A40</color>
+
+    <color name="card_text">#FFFFFF</color>
 </resources>
