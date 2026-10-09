@@ -1,20 +1,29 @@
 package com.example.praktikum4
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -115,5 +124,80 @@ fun AktivitasPertama(modifier: Modifier) {
             fontSize = 12.sp,
             textAlign = TextAlign.Center
         )
+    }
+}
+
+@Composable
+fun CardKarakter(
+    gambarKarakter: Int,
+    gambarElemen: Int,
+    nama: Int,
+    informasi: Int,
+    elemen: Int,
+    warna: Int
+) {
+    Card (
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(14.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = colorResource(warna)
+        ),
+        elevation = CardDefaults.cardElevation(
+            defaultElevation = 5.dp
+        )
+    ) {
+        Row (
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(12.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+
+            Image(
+                painter = painterResource(gambarKarakter),
+                contentDescription = stringResource(nama),
+                modifier = Modifier.size(85.dp),
+                contentScale = ContentScale.Crop
+            )
+
+
+            Column(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.Center
+            ) {
+                Text(
+                    text = stringResource(nama),
+                    fontSize = 17.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = colorResource(R.color.card_text)
+                )
+
+                Spacer(modifier = Modifier.height(5.dp))
+
+                Text(
+                    text = stringResource(informasi),
+                    fontSize = 12.sp,
+                    color = colorResource(R.color.card_text)
+                )
+
+                Spacer(modifier = Modifier.height(5.dp))
+
+                Text(
+                    text = stringResource(elemen),
+                    fontSize = 13.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = colorResource(R.color.card_text)
+                )
+            }
+
+
+            Image(
+                painter = painterResource(gambarElemen),
+                contentDescription = stringResource(elemen),
+                modifier = Modifier.size(55.dp),
+                contentScale = ContentScale.Fit
+            )
+        }
     }
 }
