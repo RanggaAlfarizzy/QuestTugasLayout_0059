@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
@@ -102,5 +103,17 @@ fun AktivitasPertama(modifier: Modifier) {
                 warna = R.color.card_4_bg
             )
         }
+
+        Text(
+            text = stringResource(R.string.copyright),
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .fillMaxWidth()
+                .background(colorResource(R.color.screen_bg))
+                .padding(12.dp),
+            color = colorResource(R.color.copyright_color),
+            fontSize = 12.sp,
+            textAlign = TextAlign.Center
+        )
     }
 }
